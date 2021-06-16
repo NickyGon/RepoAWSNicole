@@ -1,0 +1,43 @@
+DYNAMO PRICING
+
+1 WCU = 0.00065$
+1 RCU = 0.00013$
+
+Eventualmente consistente 2-->1 RCU
+10 R/s = 5 RCU
+10 W/s = 10 WCU
+
+Total Horas= 15h *30d = 450h
+
+Precio por reads = 450h * 0.00013$ * 5RCU
+                           = 0.2925$
+Precio por Writes = = 450h * 0.00065$ * 10 WCU
+                     = 2.9525$
+
+Precio de almacenamiento= 0.25$ * 1000Gb
+= 250$
+
+API GATEWAY
+request_per_second = 20 request/second
+total seconds = 450h * 3600s = 1620000
+total requests = total_seconds * request_per_second
+
+                    = 32,400,000
+
+total_price = 3.50$*32 =  112$
+
+LAMBDA PRICING
+total requests = total_seconds * request_per_second
+
+                    = 32,400,000/
+
+lambda_execution_time = 225ms
+
+total_execution_time = total_request * lambda_execution_time
+
+                                = 7,290,000,000ms
+
+total_price = price_per_milisecond * total_execution_time
+total_price = 0.0000000021 * 7,290,000,000ms
+
+                = 15$
